@@ -34,39 +34,21 @@ Clone the Repository:
 ```
 git clone https://github.com/3tternp/aws-cis
 cd aws-cis
-```
-
-
 Make the Script Executable:
-
 chmod +x cis_aws.sh
-
-Usage
-
-
-Run the Script:
-
+```
+# Usage
+```
 ./cis_aws.sh
-
-
 
 Provide Inputs:
 
-
-
-
-
 AWS Access Key ID: Enter the IAM user's access key.
-
-
 
 AWS Secret Access Key: Enter the corresponding secret key.
 
-
-
 AWS Region: Enter the AWS region (e.g., us-east-1). Press Enter for default (us-east-1).
-
-
+```
 
 Review Output:
 
