@@ -50,134 +50,26 @@ AWS Secret Access Key: Enter the corresponding secret key.
 AWS Region: Enter the AWS region (e.g., us-east-1). Press Enter for default (us-east-1).
 ```
 
-Review Output:
-
-
-
-
-
+# Review Output:
+```
 The script installs dependencies (aws-cli, jq) if not present.
-
-
-
 It performs automated checks and lists manual checks for review.
-
-
-
-Results are saved to:
-
-
-
-
-
+```
+# Results are saved to:
+```
 JSON: cis_aws_benchmark_5.0.0_report_YYYYMMDD_HHMMSS.json
 
-
-
 HTML: cis_aws_benchmark_5.0.0_report_YYYYMMDD_HHMMSS.html
+```
 
 
-
-A summary is printed to the console.
-
-Output
-
-
-
-
-
-JSON Report: Contains raw results with fields:
-
-
-
-
-
-check_id: CIS benchmark control ID (e.g., 1.3).
-
-
-
-status: PASS, FAIL, or INFO (for manual checks).
-
-
-
-message: Description of the check.
-
-
-
-details: Specific findings (e.g., non-compliant resources).
-
-
-
-risk: Critical, High, or Medium.
-
-
-
-remediation: Steps to fix non-compliance.
-
-
-
-HTML Report: A formatted table with columns for Check ID, Issue Name, Risk Rating, Status, Details, and Remediation Steps. Color-coded for readability (green for PASS, red for FAIL, etc.).
-
-
-
-Console Summary: Lists each check’s ID, status, message, and risk rating.
-
-Checks Performed
-
-
-
-
-
-Automated Checks (36 controls): Includes IAM (e.g., root MFA, password policy), S3 (e.g., block public access), RDS (e.g., encryption), CloudTrail (e.g., multi-region), EBS (e.g., encryption), and more.
-
-
-
-Manual Checks (18 controls): Includes root MFA setup, contact details, CloudWatch monitoring (4.1–4.15), and VPC peering routes. These are flagged as "INFO" with remediation steps.
-
-
-
-Risk Ratings:
-
-
-
-
-
-Critical: Root account issues (1.3, 1.4, 1.5, 1.6, 4.3).
-
-
-
-High: Level 1 controls (e.g., IAM, S3, RDS, security groups).
-
-
-
-Medium: Level 2 controls (e.g., CloudTrail, KMS, AWS Config).
-
-Notes
-
-
-
-
-
-Permissions: The script assumes read-only access (SecurityAudit policy). Manual checks require console access or write permissions.
-
-
-
-Limitations:
-
-
-
-
-
+# Limitations:
+```
 Some controls (e.g., 2.2.4, 3.4) are not included due to read-only constraints or incomplete benchmark details.
-
-
 
 Designed for Linux/macOS. Windows users should use WSL or modify the dependency installation logic.
 
-
-
 Dependencies: Automatically installs aws-cli and jq. Ensure curl, unzip, and package managers (apt-get or brew) are available.
 
-
-
 Error Handling: The script exits if AWS CLI commands fail (e.g., invalid credentials). Verify IAM permissions before running.
+```
