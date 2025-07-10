@@ -40,6 +40,8 @@ chmod +x cis_aws.sh
 # Usage
 ```
 ./cis_aws.sh
+ or
+.\cis_aws.ps1
 
 Provide Inputs:
 
