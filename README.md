@@ -5,8 +5,6 @@ Features
 
 
 
-
-
 Automated Checks: Covers CIS controls that can be verified with read-only permissions (e.g., IAM, S3, RDS, CloudTrail, EBS, etc.).
 
 
@@ -18,58 +16,33 @@ Manual Checks: Lists controls requiring manual verification (e.g., root MFA, Clo
 Dependencies: Automatically installs aws-cli and jq for Linux/macOS environments.
 
 
-
 Reports: Generates a JSON file for raw data and an HTML file with a formatted table including issue name, risk rating (Critical, High, Medium), status (Pass/Fail), details, and remediation steps.
-
 
 
 Risk Ratings: Assigned based on CIS Level 1 (High), Level 2 (Medium), or critical impact (e.g., root account issues).
 
-Prerequisites
-
-
-
-
-
+# Prerequisites
+```
 AWS Account: An IAM user with read-only permissions (recommended: SecurityAudit policy).
 
-
-
 Operating System: Linux (e.g., Ubuntu) or macOS. Windows users can use WSL (Windows Subsystem for Linux).
-
-
-
-Dependencies:
-
-
-
-
-
+```
+# Dependencies:
+```
 curl, unzip (for installing aws-cli on Linux).
-
-
-
 apt-get (Linux) or brew (macOS) for package management.
-
-
-
+```
 Internet access to download dependencies.
-
-
 
 AWS Credentials: AWS Access Key ID and Secret Access Key for the IAM user.
 
-Installation
-
-
-
-
+# Installation
 
 Clone the Repository:
-
-git clone https://github.com/<your-username>/cis-aws-benchmark-checker.git
-cd cis-aws-benchmark-checker
-
+```
+git clone https://github.com/3tternp/aws-cis
+cd aws-cis
+```
 
 
 Make the Script Executable:
@@ -77,9 +50,6 @@ Make the Script Executable:
 chmod +x cis_aws_benchmark_5.0.0_checker.sh
 
 Usage
-
-
-
 
 
 Run the Script:
