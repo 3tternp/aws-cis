@@ -1,26 +1,18 @@
 # aws-cis
-This repository contains a Bash script (cis_aws_benchmark_5.0.0_checker.sh) designed to automate compliance checks against the CIS AWS Foundations Benchmark v5.0.0. The script verifies AWS configurations using read-only permissions, generates detailed reports in JSON and HTML formats, and provides remediation steps for non-compliant resources. Manual checks are listed for review where automation is not possible due to permission or console-based requirements.
+This repository contains a Bash script (cis_aws.sh) designed to automate compliance checks against the CIS AWS Foundations Benchmark v5.0.0. The script verifies AWS configurations using read-only permissions, generates detailed reports in JSON and HTML formats, and provides remediation steps for non-compliant resources. Manual checks are listed for review where automation is not possible due to permission or console-based requirements.
 
-Features
-
-
-
+# Features
+```
 Automated Checks: Covers CIS controls that can be verified with read-only permissions (e.g., IAM, S3, RDS, CloudTrail, EBS, etc.).
-
-
 
 Manual Checks: Lists controls requiring manual verification (e.g., root MFA, CloudWatch monitoring) with remediation guidance.
 
-
-
 Dependencies: Automatically installs aws-cli and jq for Linux/macOS environments.
-
 
 Reports: Generates a JSON file for raw data and an HTML file with a formatted table including issue name, risk rating (Critical, High, Medium), status (Pass/Fail), details, and remediation steps.
 
-
 Risk Ratings: Assigned based on CIS Level 1 (High), Level 2 (Medium), or critical impact (e.g., root account issues).
-
+```
 # Prerequisites
 ```
 AWS Account: An IAM user with read-only permissions (recommended: SecurityAudit policy).
@@ -47,14 +39,14 @@ cd aws-cis
 
 Make the Script Executable:
 
-chmod +x cis_aws_benchmark_5.0.0_checker.sh
+chmod +x cis_aws.sh
 
 Usage
 
 
 Run the Script:
 
-./cis_aws_benchmark_5.0.0_checker.sh
+./cis_aws.sh
 
 
 
