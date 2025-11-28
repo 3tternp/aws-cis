@@ -75,3 +75,22 @@ Dependencies: Automatically installs aws-cli and jq. Ensure curl, unzip, and pac
 
 Error Handling: The script exits if AWS CLI commands fail (e.g., invalid credentials). Verify IAM permissions before running.
 ```
+
+# Python GUI/CLI Usage
+An experimental Tkinter GUI for credential entry and future assessments is available in the `app/` package.
+
+## Requirements
+- Python 3.10+
+- `boto3`
+
+Install boto3 if needed:
+```bash
+pip install boto3
+```
+
+## Run the GUI
+```bash
+python -m app
+```
+
+You will be prompted for the AWS Access Key ID, Secret Access Key, and region (via dropdown). The app performs basic credential format validation before initializing a `boto3` session and running a placeholder assessment that confirms permissions.
